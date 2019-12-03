@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "438279819008",
+    "firebase_url": "https://hankki-5b64a.firebaseio.com",
+    "project_id": "hankki-5b64a",
+    "storage_bucket": "hankki-5b64a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438279819008:android:a41e45d99ea21fbe85ade5",
+        "android_client_info": {
+          "package_name": "com.example.hankki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438279819008-h4p5t7do8qvd30vvv1lntfql3pim4sls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDFEjUmwZeimTeoI-bg2YYaA_Yphq0f-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438279819008-h4p5t7do8qvd30vvv1lntfql3pim4sls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438279819008:android:5281fc7e60a64a5885ade5",
+        "android_client_info": {
+          "package_name": "com.example.hankkiadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438279819008-h4p5t7do8qvd30vvv1lntfql3pim4sls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDFEjUmwZeimTeoI-bg2YYaA_Yphq0f-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438279819008-h4p5t7do8qvd30vvv1lntfql3pim4sls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
