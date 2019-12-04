@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        db.collection("orders")
-            .orderBy("orderNum")
+
+        db.collection("orders").orderBy("orderNum")
             .addSnapshotListener { snapshots, e ->
                 if (e != null) {
                     return@addSnapshotListener
