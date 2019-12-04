@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_new2"
         android:label="한성세끼 관리자"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
