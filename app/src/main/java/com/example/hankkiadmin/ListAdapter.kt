@@ -56,8 +56,12 @@ class ListAdapter : BaseAdapter {
                 if(finish){
                     //버튼 비활성화
                     view.finishBtn.isEnabled = false
+                    //버튼 색바꾸기
+
+                    view.finishBtn.setBackgroundResource(R.drawable.button2)
                     // 리스트 뷰 색깔 회색으로 만들기
-                    parent!!.getChildAt(position).setBackgroundColor(rgb(237,237,237))
+                    parent!!.getChildAt(position).setBackgroundColor(rgb(185,190,191))
+
                 }
             }
             .addOnFailureListener {
@@ -74,7 +78,7 @@ class ListAdapter : BaseAdapter {
                             document.reference.update("finish", true)
                         }
                     }
-              }
+                }
         }
 
         return view
