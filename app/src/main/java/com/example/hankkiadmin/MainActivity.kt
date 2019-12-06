@@ -9,12 +9,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 //관리자 앱 메인화면
 class MainActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
-    private var orders = mutableListOf<Order>() //변경가능한 리스트를 만들어주기 위해서
+    private var orders = mutableListOf<Order>() //변경가능한 리스트를 만들어주기 위해
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) //activity_main 파일을 참조한다
 
-        db.collection("orders").orderBy("orderNum") //firestore의 orders 컬렉션을 orderNum이라는 필드로 정렬한다.
+        //firestore의 orders 컬렉션을 orderNum이라는 필드로 정렬한다.
+        db.collection("orders").orderBy("orderNum")
             .addSnapshotListener { snapshots, e -> // 실시간 변경 사항에 대한 변경 사항을 수신
                 if (e != null) {
                     return@addSnapshotListener
