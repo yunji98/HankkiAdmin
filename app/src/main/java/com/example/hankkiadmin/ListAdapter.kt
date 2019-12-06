@@ -9,8 +9,10 @@ import android.widget.BaseAdapter
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.order_list.view.*
 
-
+//주문 데이터 클래스
 data class  Order(val orderNum : String, val menu : String, val amount : String)
+
+// MainActivity에 있는 ListView inflate해주는 Adapter
 class ListAdapter : BaseAdapter {
     private val db = FirebaseFirestore.getInstance()
     private val ctx: Context?
@@ -37,7 +39,7 @@ class ListAdapter : BaseAdapter {
         var view = convertView
 
         val inflater = LayoutInflater.from(ctx)
-        view = inflater.inflate(R.layout.order_list, parent, false)
+        view = inflater.inflate(R.layout.order_list, parent, false)  // list 하나에 order_list로 구성되게 해준다
 
         val m = order[position]
 
@@ -45,7 +47,10 @@ class ListAdapter : BaseAdapter {
         view.menuView.text = m.menu
         view.amountView.text = "X" + m.amount
 
+        // 음식 제조 완료 여부를 확인할 수 있는 변수
         var finish = false
+
+        // orders 컬렉션을 가져와서 menu 이름 비교해서 finish가 true면 버튼 비활성화, 배경색 바꿈
         db.collection("orders")
             .whereEqualTo("menu", m.menu)
             .get()
@@ -68,6 +73,7 @@ class ListAdapter : BaseAdapter {
             }
 
 
+        // 완료 버튼을 누르면 finish를 true로 바꿔주는 코드
         view.finishBtn.setOnClickListener{
             db.collection("orders")
                 .whereEqualTo("orderNum", Integer.parseInt(m.orderNum))
