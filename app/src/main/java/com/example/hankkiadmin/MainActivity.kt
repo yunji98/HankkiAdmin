@@ -20,13 +20,14 @@ class MainActivity : AppCompatActivity() {
                     return@addSnapshotListener
                 }
 
-                for (dc in snapshots!!.documentChanges) { //document가 변경된 만큼 for문
+                //document가 변경된 만큼 for문
+                for (dc in snapshots!!.documentChanges) {
                     when (dc.type) {
                         DocumentChange.Type.ADDED -> { //document가 추가가 되었을 때가
                             val orderNum = dc.document.get("orderNum").toString()
                             val menu = dc.document.get("menu").toString()
                             val amount = dc.document.get("amount").toString()
-                            orders.add(Order(orderNum, menu, amount)) //orders 리스트에 데이터클래스 order를 추가
+                            orders.add(Order(orderNum, menu, amount)) //orders 리스트에 데이터클래스 Order를 추가
                         }
                     }
                 }
@@ -34,13 +35,14 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-
     private fun upload(){
         val mListView = listView
         val reversedOrders = orders.reversed() as MutableList<Order> //최신순으로 출력하기 위해서 list reversed()해준다
         val mAdapter = ListAdapter(this, reversedOrders)
-        mListView?.adapter = mAdapter
-        mAdapter.notifyDataSetChanged() //어댑터에 연결된 Listview를 갱신
+        mListView?.adapter = mAdapter // ListView에 inflate 하기
+
+        //어댑터에 연결된 Listview를 갱신
+        mAdapter.notifyDataSetChanged()
     }
 
 }
