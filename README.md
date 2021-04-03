@@ -56,8 +56,12 @@
         
 
 
-# 예시
+# 실행 화면
 
-![텀프1](https://user-images.githubusercontent.com/56016350/66817799-3e7c7000-ef77-11e9-9003-9b2b4c443a4a.png)
-![텀프2](https://user-images.githubusercontent.com/56016350/66817803-3f150680-ef77-11e9-9bfd-e68045603d07.png)
+# 실행 화면
 
+### 식당 어플
+<img src="https://user-images.githubusercontent.com/48197531/113474623-f1ae9100-94ab-11eb-9544-70fa282a7fa1.png" width="250" height="500">
+
+### 사용자 어플(음식 준비 완료 알람)
+<img src="https://user-images.githubusercontent.com/48197531/113474621-ef4c3700-94ab-11eb-8349-160ac4af8d9e.png" width="250" height="500">
